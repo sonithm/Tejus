@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tejus.Views.LoginPage"   BackgroundImage="Background.png">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CustomStyle" TargetType="Label" BaseResourceKey="SubtitleStyle">
+                <Setter Property="Label.TextColor" Value="Color.Pink"/>
+            </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#0892D0"/>
+                <Setter Property="BorderRadius" Value="10"/>
+                <Setter Property="HeightRequest" Value="42"/>
+            </Style>
+            <Style TargetType="BoxView">
+                <Setter Property="Color" Value="Aqua"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout x:Name="MasterLayout" >
+        <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+            <!--<Image x:Name="LoginIcon" Source="LoginIcon.png" Margin="0,80,0,0">                
+            </Image>-->
+        </StackLayout>
+        <StackLayout x:Name="LoginEntriesStack" VerticalOptions="StartAndExpand">
+            <StackLayout.Padding>
+                <!--<OnIdiom x:TypeArgument="Thickness">
+                    <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
+                    <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
+                </OnIdiom>-->
+            </StackLayout.Padding>
+            <StackLayout Padding="20,20,20,20">
+
+
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True"></ActivityIndicator>
+                <Label x:Name="Lbl_Username" Text="Username"></Label>
+                <Entry x:Name="Entry_Username" Placeholder="Email Adress"></Entry>
+                <Label x:Name="Lbl_Password" Text="Password"></Label>
+                <Entry x:Name="Entry_Password" Placeholder="Password"></Entry>
+                <Grid Padding="2" ColumnSpacing="2" RowSpacing="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <!--<Button x:Name="Btn_Login"  Text="Login" Clicked="Btn_Login_Clicked" Style="{StaticResource ButtonStyle}" Grid.Row="1"></Button>-->
+                    <Button x:Name="Btn_Login"  Text="Login" Clicked="Btn_Login_Clicked"  BackgroundColor="Blue" Grid.ColumnSpan="2" ></Button>
+                    <Button x:Name="Btn_Register" Text="Register" Clicked="Btn_Register_Clicked" BackgroundColor="Blue"   Grid.Row="1"  Grid.ColumnSpan="2" ></Button>
+                    <!--<Button x:Name="Btn_Register" Text="Register" Clicked="Btn_Register_Clicked" Style="{StaticResource ButtonStyle}" Grid.Row="1" Grid.Column="1"></Button>-->
+                    <Button x:Name="Btn_Search"  Text="Search"  Clicked="Btn_Search_Clicked"   BackgroundColor="Blue" Grid.Row="2"  Grid.ColumnSpan="2"></Button>
+                </Grid>
+
+            </StackLayout>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

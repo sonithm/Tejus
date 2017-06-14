@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tejus.Views.Register"   BackgroundImage="Blank.png" >
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Create account" TextColor="White" FontSize="20"></Label>
+            <Entry x:Name="FirstName" Placeholder="First Name" WidthRequest="150"></Entry>
+            <Entry x:Name="MiddleName" Placeholder="Middle Name" WidthRequest="150"></Entry>
+            <Entry x:Name="LastName" Placeholder="Last Name" WidthRequest="150"></Entry>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Date of Birth" FontSize="25" TextColor="White" VerticalOptions="End"/>
+                <DatePicker x:Name="Date"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Time to start" VerticalOptions="End" FontSize="25" TextColor="White"/>
+                <TimePicker x:Name="Time" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Button BackgroundColor="Gray" TextColor="White" Text="Save" />
+                <Button BackgroundColor="Maroon" TextColor="White" Text="View"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

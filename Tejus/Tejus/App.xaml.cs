@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Tejus.Views;
 using Xamarin.Forms;
 
 namespace Tejus
@@ -13,8 +13,9 @@ namespace Tejus
 		{
 			InitializeComponent();
 
-			MainPage = new Tejus.MainPage();
-		}
+            //MainPage = new Tejus.MainPage();
+            MainPage = new NavigationPage(new LoginPage());
+        }
 
 		protected override void OnStart ()
 		{
