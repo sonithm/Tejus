@@ -51,9 +51,9 @@ namespace Tejus.Views
             if (user.CheckInformation())
             {
                 //DisplayAlert("Login", "Login Success", "Ok");
-                NavigationPage.SetHasNavigationBar(this, false);
-                Navigation.PushAsync(new MasterDetailPage1());
-           
+                //NavigationPage.SetHasNavigationBar(this, false);
+                //Navigation.PushAsync(new MasterDetailPage1());
+                App.Current.MainPage = new NavigationPage(new MasterDetailPage1());
             }
             else
             {

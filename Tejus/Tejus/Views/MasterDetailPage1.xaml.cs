@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Tejus.Models;
 namespace Tejus.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -28,8 +28,13 @@ namespace Tejus.Views
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
-
-            Detail = new NavigationPage(page);
+            if (item.Id.Equals(1))
+            {
+                Detail = new NavigationPage(new DonersList());
+            }
+            else
+            { Detail = new NavigationPage(page); }
+            
             IsPresented = false;
 
             MasterPage.ListView.SelectedItem = null;
