@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tejus.Models;
+using Tejus.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -48,18 +49,19 @@ namespace Tejus.Views
         {
             ActivitySpinner.IsVisible = true;
             User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (user.CheckInformation())
-            {
-                //DisplayAlert("Login", "Login Success", "Ok");
-                //NavigationPage.SetHasNavigationBar(this, false);
-                //Navigation.PushAsync(new MasterDetailPage1());
-                App.Current.MainPage = new NavigationPage(new MasterDetailPage1());
-            }
-            else
-            {
-                DisplayAlert("Login", "Login Not Correct, empty username or password", "Ok");
-            }
-            ActivitySpinner.IsVisible = false;
+            XamarinAPI.Login(Entry_Username.Text, Entry_Password.Text);
+            //if (user.CheckInformation())
+            //{
+            //    //DisplayAlert("Login", "Login Success", "Ok");
+            //    //NavigationPage.SetHasNavigationBar(this, false);
+            //    //Navigation.PushAsync(new MasterDetailPage1());
+            //    App.Current.MainPage = new NavigationPage(new MasterDetailPage1());
+            //}
+            //else
+            //{
+            //    DisplayAlert("Login", "Login Not Correct, empty username or password", "Ok");
+            //}
+            //ActivitySpinner.IsVisible = false;
         }
 
         private void Btn_Register_Clicked(object sender, EventArgs e)

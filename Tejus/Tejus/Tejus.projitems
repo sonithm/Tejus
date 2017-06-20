@@ -16,8 +16,11 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Taks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Token.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\XamarinAPI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DonersList.xaml.cs">
       <DependentUpon>DonersList.xaml</DependentUpon>
       <SubType>Code</SubType>
