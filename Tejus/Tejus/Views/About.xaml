@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tejus.Views.About" Title="About us">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label FontSize="Large" Text="About us"/>
+            <Label FontSize="Small" Text="Have you ever witnessed your relative or close friend frantically searching for a blood donor, and blood banks say Out of stock, the donors in mind are out of reach, and time keeps ticking? Have you witnessed loss of a life only because a donor was not available at the most needed hour? Is it a situation that we as a society can do nothing to prevent? These thoughts and questions laid the foundation for TEJUS. 
+                                            TEJUS was formed by a group of like-minded people, to overcome these hurdles and help those in need of blood. We are a charitable organization who make use of the most familiar information technologies such as the Email, WhatsApp, and other phone and social networks, besides the regular word of mouth publicity, to reach out to those in need.
+                                            We contact and connect those in need of blood, with those who are willing donors of blood. We strive to bridge the gap between the two and it is our constant endeavor to do our best to make lives better for both the parties.
+                                            We want to make optimum and efficient use of the existing services to build up a good foundation within a short period. To aid and speed up our effort, we would like to expand our network by inviting and bringing in like-minded people on to this single platform.
+                                            A donor plays a precious and the most important part in the blood donation process. A good decision on your part as a donor can have a rewarding effect in this world, sometimes in our lifetime, sometimes in the lifetime of generations to come. Come and join TEJUS! "/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                   
+                    
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Source="mission.png"  VerticalOptions="Center"
+              Grid.Row="1"></Image>
+                <Label FontSize="Small" VerticalOptions="Center"
+          
+              Grid.Row="2"
+              Text="To live, to love, to learn, and to leave a legacy. – Steven R Covey"  />
+                <Image Source="vision.png" Grid.Column="1" VerticalOptions="Center"
+              Grid.Row="1"></Image>
+                <Label FontSize="Small" VerticalOptions="Center"
+              Grid.Column="1"
+              Grid.Row="4"
+              Text="Work towards the realization of our dreams of an enlightened India, a nation to be the leading light for the rest of the world. We will follow the footsteps of our father of nation; we need to be the change that we want to see in the world"/>
+            </Grid>
+        </StackLayout>
+
+      
+    </ContentPage.Content>
+</ContentPage>

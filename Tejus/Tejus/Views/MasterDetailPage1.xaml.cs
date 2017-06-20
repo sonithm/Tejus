@@ -30,7 +30,15 @@ namespace Tejus.Views
             page.Title = item.Title;
             if (item.Id.Equals(1))
             {
-                Detail = new NavigationPage(new DonersList());
+                Detail = new NavigationPage(new Search());
+            }
+            else if(item.Id.Equals(0))
+            {
+                Detail = new NavigationPage(new Register());
+            }
+            else if (item.Id.Equals(3))
+            {
+                Detail = new NavigationPage(new About());
             }
             else
             { Detail = new NavigationPage(page); }

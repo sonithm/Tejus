@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tejus.Views.MasterDetailPage1Detail"
+              Padding="0,40,0,0"
+             Icon="Icon"
              Title="Home">
   <StackLayout Padding="10">
         <Label FontSize="Large" Text="TEJUS' story"/>
-        <Label FontSize="Large" Text="Have you ever witnessed your relative or close friend frantically searching for a blood donor, and blood banks say Out of stock, the donors in mind are out of reach, and time keeps ticking? Have you witnessed loss of a life only because a donor was not available at the most needed hour? Is it a situation that we as a society can do nothing to prevent? These thoughts and questions laid the foundation for TEJUS. "/>
+        <Label FontSize="Small" Text="Have you ever witnessed your relative or close friend frantically searching for a blood donor, and blood banks say Out of stock, the donors in mind are out of reach, and time keeps ticking? Have you witnessed loss of a life only because a donor was not available at the most needed hour? Is it a situation that we as a society can do nothing to prevent? These thoughts and questions laid the foundation for TEJUS. "/>
     </StackLayout>
 </ContentPage>

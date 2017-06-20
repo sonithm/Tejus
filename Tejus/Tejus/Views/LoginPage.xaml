@@ -36,7 +36,7 @@
                 <Label x:Name="Lbl_Username" Text="Username"></Label>
                 <Entry x:Name="Entry_Username" Placeholder="Email Adress"></Entry>
                 <Label x:Name="Lbl_Password" Text="Password"></Label>
-                <Entry x:Name="Entry_Password" Placeholder="Password"></Entry>
+                <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True" ></Entry>
                 <Grid Padding="2" ColumnSpacing="2" RowSpacing="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />

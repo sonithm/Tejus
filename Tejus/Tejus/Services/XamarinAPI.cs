@@ -45,8 +45,8 @@ namespace Tejus.Services
             {
                 HttpClient client = new HttpClient();
                 client.MaxResponseContentBufferSize = 256000;
-                string urltejus = @"http://tejus.vaspublications.com//api/Login/LogIn?username="+Username+"&password=sonith";
-                var uri = new Uri(urlapi);
+                string urltejus = @"http://tejus.vaspublications.com//api/Login/LogIn?username="+Username.Trim()+"&password=sonith";
+                var uri = new Uri(urltejus);
                 var response = await client.GetAsync(uri);
                 if (response.IsSuccessStatusCode)
                 {
