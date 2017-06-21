@@ -40,6 +40,10 @@ namespace Tejus.Views
             {
                 Detail = new NavigationPage(new About());
             }
+            else if (item.Id.Equals(5))
+            {
+                Detail = new NavigationPage(new Associates());
+            }
             else
             { Detail = new NavigationPage(page); }
             
