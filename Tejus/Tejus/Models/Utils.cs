@@ -18,4 +18,9 @@ namespace Tejus.Models
         public string ErrorMessage { get; set; }
         public string ErrorType { get; set; }
     }
+    public class UserDetail
+    {
+        public string Name { get; set; }
+        public string Type { get; set; }
+    }
 }

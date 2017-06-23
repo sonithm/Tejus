@@ -34,11 +34,11 @@ namespace Tejus.Views
                 MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
                 {
                     new MasterDetailPage1MenuItem { Id = 0, Title = "Register as Donor",Icon="User" },
-                    new MasterDetailPage1MenuItem { Id = 1, Title = "Donors' List" ,Icon="User"},
-                    new MasterDetailPage1MenuItem { Id = 2, Title = "Post Requirements ",Icon="User" },
-                    new MasterDetailPage1MenuItem { Id = 3, Title = "About Us",Icon="User" },
-                    new MasterDetailPage1MenuItem { Id = 4, Title = "News & Events",Icon="User" },
-                    new MasterDetailPage1MenuItem { Id = 5, Title = "Associates",Icon="User" },
+                    new MasterDetailPage1MenuItem { Id = 1, Title = "Donors' List" ,Icon="Donor"},
+                    new MasterDetailPage1MenuItem { Id = 2, Title = "Post Requirements ",Icon="Post" },
+                    new MasterDetailPage1MenuItem { Id = 3, Title = "About Us",Icon="About" },
+                    new MasterDetailPage1MenuItem { Id = 4, Title = "News & Events",Icon="News" },
+                    new MasterDetailPage1MenuItem { Id = 5, Title = "Associates",Icon="Asso" },
                   
                 });
             }

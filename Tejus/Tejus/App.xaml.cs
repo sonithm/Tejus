@@ -15,13 +15,40 @@ namespace Tejus
 	public partial class App : Application
 	{
         public static List<TEJUSDonorModel> LstTareas { get; set; }
+        string username;
+        string passwrod;
         public App ()
 		{
 			InitializeComponent();
             LstTareas = new List<TEJUSDonorModel>();
             Task.Run(async () => LstTareas = await XamarinAPI.Methods.GetAllTask());
             //MainPage = new Tejus.MainPage();
-            MainPage = new NavigationPage(new LoginPage());
+            if (Application.Current.Properties.ContainsKey("username"))
+            {
+                try
+                {
+                    username = Application.Current.Properties["username"] as string;
+                    passwrod = Application.Current.Properties["password"] as string;
+                    if (username == "")
+                    {
+                        MainPage = new NavigationPage(new LoginPage());
+                    }
+                    else
+                    {
+                        MainPage = new NavigationPage(new MasterDetailPage1());
+                    }
+                }
+                catch
+                {
+                    MainPage = new NavigationPage(new LoginPage());
+                }
+            }
+            else
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+
+            
         }
 
 		protected override void OnStart ()

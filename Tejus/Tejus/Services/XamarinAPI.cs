@@ -13,6 +13,7 @@ namespace Tejus.Services
 {
     public class XamarinAPI
     {
+      
         public static XamarinAPI Methods = new XamarinAPI();
           public const string urlapi = "http://localhost:61207/api/Login/LogIn?username=a&password=sonith";
         //  public const string urlapi = "http://tejus.vaspublications.com//api/Login/LogIn?username=a&password=sonith";
@@ -41,6 +42,7 @@ namespace Tejus.Services
         public static async Task<TEJUSResultModel> Login(string Username, string Password)
         {
             TEJUSResultModel LstTask = new TEJUSResultModel();
+           
             try
             {
                 HttpClient client = new HttpClient();
@@ -57,6 +59,8 @@ namespace Tejus.Services
                         //DisplayAlert("Login", "Login Success", "Ok");
                         //NavigationPage.SetHasNavigationBar(this, false);
                         //Navigation.PushAsync(new MasterDetailPage1());
+                        // await SaveAsync();
+                        saveset(Username, Password);
                         App.Current.MainPage = new NavigationPage(new MasterDetailPage1());
                     }
                     else
@@ -74,10 +78,17 @@ namespace Tejus.Services
             return LstTask;
         }
 
-        private void DisplayAlert(string v1, string v2, string v3)
+       
+
+        private static void saveset(string userName,string Password)
         {
-            throw new NotImplementedException();
+          
+            Application.Current.Properties["username"] = userName;
+            Application.Current.Properties["password"] = Password;
+
         }
+
+
 
         public static bool Logins()
         {
