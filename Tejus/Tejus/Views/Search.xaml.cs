@@ -61,6 +61,10 @@ namespace Tejus.Views
             //((ListView)sender).SelectedItem = null;
         }
 
+        private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+        {
+
+        }
     }
     class List_oldViewModel : INotifyPropertyChanged
     {
@@ -84,11 +88,22 @@ namespace Tejus.Views
 
             RefreshDataCommand = new Command(
                 async () => await RefreshData());
+            SearchDataCommand = new Command(
+               async () => await SearchData());
         }
 
         public ICommand RefreshDataCommand { get; }
+        public ICommand SearchDataCommand { get; }
 
         async Task RefreshData()
+        {
+            IsBusy = true;
+            //Load Data Here
+            await Task.Delay(2000);
+
+            IsBusy = false;
+        }
+        async Task SearchData()
         {
             IsBusy = true;
             //Load Data Here
